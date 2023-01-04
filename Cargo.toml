@@ -1,0 +1,13 @@
+[package]
+name = "test-openblas-usage"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+openblas-src = { version = "0.10", git = "https://github.com/lazareviczoran/openblas-src", branch = "add-feature-flags-for-native-tls", default-features = false, features = [
+    "cblas",
+    "system",
+    "native-certs",
+] }
